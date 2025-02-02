@@ -10,7 +10,7 @@
     const marker = new mapboxgl.Marker({ color: 'red'})
     .setLngLat(listing.geometry.coordinates) //Listing geometry coordinates
     .setPopup(new mapboxgl.Popup({offset: 25})
-    .setHTML(`<h4>${listing.title}</h4><p>Exact Locatipn Provided after Booking!</p>`))
+    .setHTML(`<h4>${listing.title}</h4><p>Exact Location Provided after Booking!</p>`))
     .addTo(map);
 
    
