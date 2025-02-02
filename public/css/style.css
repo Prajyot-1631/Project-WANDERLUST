@@ -33,7 +33,6 @@ body{
 }
 .f-info-links a:hover{
   text-decoration: underline;
-  
 }
 
 .f-info-links, 
@@ -45,9 +44,29 @@ body{
   justify-content: center;  
 }
 
+.f-info-socials a {
+  display: inline-flex;
+  align-items:center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #ebebeb;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.f-info-socials a:hover {
+  background-color: #fe424d; 
+  transform: scale(1.2);
+  color: white;
+}
+
 .f-info-socials i {
-  font-size: 1.2rem;
-  margin-right: 1rem;
+  font-size: 1.5rem;
+  /* margin-right: 1rem; */
+  color: #222;
+  transition: color 0.3s ease;
 }
 
 .f-info {
@@ -152,4 +171,56 @@ body{
   .card-img-top {
     height: 200px;
   }
+}
+
+/* Filter icons */
+#filters {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.filter a { 
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-decoration: none;
+  color: black;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.filter a:hover {
+  transform: scale(1.1);
+  color: #fe424d;
+}
+
+.filter div {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ebebeb;
+  border-radius: 50%;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.filter a:hover div {
+  background-color: #fe424d;
+}
+
+.filter i {
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.filter a:hover {
+  color:white;
+}
+
+.filter p {
+  margin-top:5px;
+  font-size:14px;
+  color:#222;
 }
