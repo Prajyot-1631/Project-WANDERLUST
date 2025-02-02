@@ -86,10 +86,32 @@ module.exports.index = async (req,res)=>{
     res.redirect("/listings");
   };
 
-  // category filtering mechanism
+  // category filtering mechanism only working for filter icons
+  // module.exports.index = async (req,res) => {
+  //   const { category } = req.query;  
+  //   const filter = category ? { category: category } : {};
+  //   const allListings = await Listing.find(filter); //Find listings based on filter
+  //   res.render("../views/listings/index.ejs", { allListings });
+  // };
+
+// category filtering mechanism:- filter icons + search bar
   module.exports.index = async (req,res) => {
-    const { category } = req.query;  
-    const filter = category ? { category: category } : {};
+    const { category, search } = req.query;
+
+    let filter = {};
+    
+    if (category) {
+      filter.category = category;
+    }
+
+    if(search) {
+      filter.$or = [
+        {title: { $regex: search, $options: "i"} },
+        {location: { $regex: search, $options: "i"} },
+        {country: { $regex: search, $options: "i"} },
+        {category: { $regex: search, $options: "i"} }
+      ];
+    }
     const allListings = await Listing.find(filter); //Find listings based on filter
     res.render("../views/listings/index.ejs", { allListings });
   };
