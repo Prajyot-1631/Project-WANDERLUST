@@ -30,4 +30,4 @@
       📱 Responsive design for all devices.
 
 
-Website Link: https://mern-project-wanderlust.onrender.com
+Website Link: https://mern-project-wanderlust.onrender.com/listings
