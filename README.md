@@ -3,7 +3,7 @@
     Wanderlust is a web application that allows users to explore, list, and review travel accommodations.
     Built with a robust backend and a user-friendly interface, it simplifies the process of finding and sharing travel stays.
 
-
+---
       Technologies Used:
       
       Backend: Node.js, Express.js, MongoDB.
@@ -14,7 +14,7 @@
       
       Hosting: Render.
 
-
+---
       Key Features:
       
       🏡 Browse Listings: View travel accommodations with details and images.
@@ -29,5 +29,5 @@
       
       📱 Responsive design for all devices.
 
-
+---
 Website Link: https://mern-project-wanderlust.onrender.com/listings
